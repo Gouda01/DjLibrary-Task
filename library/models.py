@@ -27,7 +27,7 @@ class Book (models.Model):
 class Review (models.Model) :
     reviewer_name = models.CharField(max_length = 300)
     content = models.TextField(max_length = 2000)
-    rating = models.IntegerField(default=1,validators=[MaxValueValidator(100), MinValueValidator(1)])
+    rating = models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
 
     book = models.ForeignKey(Book, related_name= 'review_book', on_delete = models.CASCADE)
 

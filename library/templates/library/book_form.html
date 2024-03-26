@@ -1,0 +1,8 @@
+<h3>Add Book</h3>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+
+    <button type="submit">Add Book</button>
+</form>
